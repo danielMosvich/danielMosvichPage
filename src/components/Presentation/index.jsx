@@ -7,7 +7,6 @@ const Container = styled.div`
   display: flex;
 `;
 const DataContainer = styled.div`
-/* background-color: blue; */
   padding: 0 0px 0 300px;
   width: 60%;
   height: 100%;
@@ -15,6 +14,7 @@ const DataContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   transition: background 0.4s;
+  /* background-color: blue; */
   h2 {
     font-size: 5rem;
     text-transform: uppercase;
@@ -43,6 +43,11 @@ const DataContainer = styled.div`
   }
   @media (max-width: 1440px) {
     padding: 0 0 0 100px;
+    width: 50%;
+  }
+  @media (max-width: 700px) {
+    width: 100%;
+    padding: 0 50px;
   }
 `;
 

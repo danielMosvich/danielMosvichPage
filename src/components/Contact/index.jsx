@@ -1,34 +1,43 @@
 import styled from "styled-components";
 
 const Container = styled.div`
+  transform: translateY(-5px);
   background-color: ${(props) => props.theme.primaryColor};
-  margin-top: 200px;
+  /* margin-top: 200px; */
 `;
 const AllData = styled.div`
   width: 100%;
   display: flex;
   height: 100vh;
 `;
-const SvgContainer = styled.div`
-  width: 100%;
-  height: 10px;
-  position: relative;
-  /* background-color: red; */
-  img {
-    position: absolute;
-    top: -423px;
-  }
-`;
 const ContainerDraw = styled.div`
   width: 50%;
   height: 100%;
-  /* background-color: purple; */
   position: relative;
+  background-color: red;
+  @media (max-width: 900px) {
+    display: flex;
+    justify-content: center;
+  }
   img {
     left: 150px;
     position: absolute;
     top: 90px;
     height: 90%;
+    @media (max-width: 1700px) {
+      top: 180px;
+      height: 70%;
+    }
+    @media (max-width: 1200px) {
+      top: 250px;
+      height: 50%;
+      left: 170px;
+    }
+    @media (max-width: 900px) {
+      top: 300px;
+      height: 40%;
+      left: 50px;
+    }
   }
 `;
 const ContainerData = styled.div`
@@ -39,6 +48,12 @@ const ContainerData = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media (max-width: 1700px) {
+    padding: 0 0 0 200px;
+  }
+  @media (max-width: 1440px) {
+    padding: 0 0 0 100px;
+  }
 `;
 const Head = styled.div`
   img {
@@ -54,6 +69,16 @@ const Head = styled.div`
   p {
     font-size: 1.5rem;
     color: white;
+  }
+  @media (max-width: 1200px) {
+    h3 {
+      font-size: 3rem;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      filter: brightness(3);
+    }
   }
 `;
 const Body = styled.div`
@@ -106,10 +131,6 @@ const RedesContainer = styled.div`
 function Contact() {
   return (
     <Container>
-      <SvgContainer>
-        <img src="../../../public/wave.svg" alt="" />
-      </SvgContainer>
-
       <AllData>
         <ContainerData>
           <Head>

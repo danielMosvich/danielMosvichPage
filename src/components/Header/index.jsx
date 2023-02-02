@@ -3,9 +3,8 @@ import gsap from "gsap";
 import { useRef } from "react";
 import { useEffect } from "react";
 import ToggleTheme from "./ToggleTheme";
-// import Link from "./LinkHeader";
 import LinkHeader from "./LinkHeader";
-// import icon from '../../../public/daniray.svg'
+
 const Container = styled.div`
   width: 100%;
   height: 80px;
@@ -29,14 +28,26 @@ const ContainerLogo = styled.div`
     width: 60px;
     object-fit: contain;
   }
+  @media (max-width: 1500px) {
+    width: 20%;
+  }
+  @media (max-width: 1200px) {
+      display: none;
+    }
 `;
 const ContainerNav = styled.div`
+  background-color: red;
   width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 2.5rem; */
+  @media (max-width: 1500px) {
+    width: 80%;
+  }
+  @media (max-width: 1200px) {
+      width:100%;
+    }
   a {
     text-transform: uppercase;
     color: ${(props) => props.theme.textColor1};
@@ -52,7 +63,6 @@ const ContainerNav = styled.div`
     } */
   }
 `;
-
 
 function Header({ themeToggle, theme }) {
   const logo = useRef(null);
@@ -74,11 +84,11 @@ function Header({ themeToggle, theme }) {
         />
       </ContainerLogo>
       <ContainerNav>
-        <LinkHeader url="#presentation" title="Home"/>
-        <LinkHeader url="#presentation" title="About me"/>
-        <LinkHeader url="#presentation" title="Skills"/>
-        <LinkHeader url="#presentation" title="Works"/>
-        <LinkHeader url="#presentation" title="Contact"/>
+        <LinkHeader url="#presentation" title="Home" />
+        <LinkHeader url="#presentation" title="About me" />
+        <LinkHeader url="#presentation" title="Skills" />
+        <LinkHeader url="#presentation" title="Works" />
+        <LinkHeader url="#presentation" title="Contact" />
 
         {/* <a href="#aboutMe">About me</a>
         <a href="#">Skills</a>

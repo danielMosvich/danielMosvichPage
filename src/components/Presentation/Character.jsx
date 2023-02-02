@@ -1,19 +1,27 @@
 import styled from "styled-components";
-import gsap from "gsap";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 const Container = styled.div`
-  padding: 100px 150px 0 0;
+  /* padding: 100px 150px 0 0; */
   width: 40%;
   height: 100%;
   display: flex;
   transition: background 0.4s;
   align-items: center;
   position: relative;
-  /* background-color: green; */
+  background-color: green;
+  @media (max-width: 1440px) {
+    width: 50%;
+    padding: 0;
+  }
+  @media (max-width: 700px) {
+    display:none;
+  }
 `;
 const ImgContainer1 = styled.div`
+/* background-color: red; */
   /* ANIMATION */
+  height:724px;
   object-fit: cover;
   left: -40px;
   bottom: 70px;
@@ -23,11 +31,6 @@ const ImgContainer1 = styled.div`
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  /* background-color: red; */
-  img{
-    width: 100%;
-    height: 100%;
-  }
   @keyframes character1 {
     0% {
       transform: translate(-5px, -5px);
@@ -39,6 +42,17 @@ const ImgContainer1 = styled.div`
       transform: translate(-5px, -5px);
     }
   }
+  @media (max-width: 950px) {
+    height:400px;
+    bottom:350px;
+    left:50px;
+  }
+  @media (max-width: 700px) {
+    display:none;
+  }
+  img{
+    height:100%;
+  }
 `;
 const ImgContainer2 = styled.div`
   position: absolute;
@@ -46,6 +60,7 @@ const ImgContainer2 = styled.div`
   left: -40px;
   bottom: 70px;
   /* ANIMATION */
+  height:724px;
   animation-name: character2;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -62,6 +77,17 @@ const ImgContainer2 = styled.div`
       transform: translate(-5px, -5px);
     }
   }
+  @media (max-width: 950px) {
+    height:400px;
+    bottom:350px;
+    left:50px;
+  }
+  @media (max-width: 700px) {
+    display:none;
+  }
+  img{
+    height:100%;
+  }
 `;
 const ImgContainer3 = styled.div`
   position: absolute;
@@ -69,6 +95,7 @@ const ImgContainer3 = styled.div`
   left: -40px;
   bottom: 70px;
   /* ANIMATION */
+  height:724px;
   animation-name: character3;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -84,6 +111,17 @@ const ImgContainer3 = styled.div`
     100% {
       transform: translate(-5px, -5px);
     }
+  }
+  @media (max-width: 950px) {
+    height:400px;
+    bottom:350px;
+    left:50px;
+  }
+  @media (max-width: 700px) {
+    display:none;
+  }
+  img{
+    height:100%;
   }
 `;
 

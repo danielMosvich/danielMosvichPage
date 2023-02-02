@@ -4,7 +4,6 @@ import Card from "./Card";
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-  padding: 0 300px 0;
   margin-top: 100px;
   h2 {
     text-align: center;
@@ -13,15 +12,21 @@ const Container = styled.div`
   }
 `;
 const CardsContainer = styled.div`
-/* background-color: red; */
+background-color: red;
   margin-top: 50px;
   width: 100%;
-  max-height: 80%;
   display: grid;
   grid-template-columns: repeat(5, 180px);
   grid-auto-rows: 130px;
   justify-content: center;
   gap: 30px;
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(4,180px);
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(4,120px);
+    grid-auto-rows: 100px;
+  }
 `;
 
 function Skills() {

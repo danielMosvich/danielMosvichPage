@@ -12,6 +12,14 @@ const ContainerHome = styled.div`
   background-color: ${(props) => props.theme.backgroundColor};
 `;
 
+const WaveContainer = styled.div`
+  width: 100%;
+  /* height: 10px; */
+  /* background-color: red; */
+  img{
+    width: 100%;
+  }
+`
 function Home({setLoad, themeToggle, theme}) {
   // ! use the scrollY value for Paralax Effect in the future
   const [scrollY, setScrollY] = useState(0)
@@ -35,6 +43,9 @@ function Home({setLoad, themeToggle, theme}) {
       <Presentation id="presentation" coords={coords}/>
       <AboutMe id="aboutMe" coords={coords} />
       <Skills />
+      <WaveContainer>
+        <img src="../../public/wave.png" alt="" />
+      </WaveContainer>
       <Contact />
     </ContainerHome>
   );

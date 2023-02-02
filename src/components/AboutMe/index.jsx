@@ -3,31 +3,37 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-  /* background-color: #703a43; */
   display: flex;
 `;
 
 const ContainerLogo = styled.div`
   width: 40%;
-  /* background-color: red; */
   padding: 0 0 0 300px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   position: relative;
+  /* background-color: red; */
+  @media (max-width: 1700px) {
+    padding: 0 0 0 200px;
+  }
+  @media (max-width: 1440px) {
+    padding: 0 0 0 100px;
+    justify-content: center;
+  }
 `;
 
 const Buble1 = styled.div`
-  width: 400px;
-  height: 400px;
-  /* background-color: ${props => props.theme.textColor2}; */
+  width: 350px;
+  height: 350px;
   border-radius: 10px;
   position: absolute;
   z-index: 4;
-  /* box-shadow:5px 5px 20px rgba(0,0,0,0.2); */
+  @media (max-width: 1700px) {
+    width: 300px;
+    height: 300px;
+  }
   img {
     object-fit: contain;
-    /* margin: 20px; */
 
     animation-name: logoSpiner;
     animation-duration: 10s;
@@ -43,22 +49,6 @@ const Buble1 = styled.div`
     }
   }
 `;
-// const Buble2 = styled.div`
-//   width: 410px;
-//   height: 410px;
-//   background-color: ${(props) => props.theme.primaryColor};
-//   border-radius: 10px;
-//   position: absolute;
-//   z-index: 3;
-// `;
-// const Buble3 = styled.div`
-//   width: 420px;
-//   height: 420px;
-//   background-color: ${(props) => props.theme.secondColor};
-//   border-radius: 10px;
-//   position: absolute;
-//   z-index: 2;
-// `;
 
 const ContainerInformation = styled.div`
   width: 60%;
@@ -66,6 +56,12 @@ const ContainerInformation = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0 300px 0 0;
+  @media (max-width: 1700px) {
+    padding: 0 200px 0 0;
+  }
+  @media (max-width: 1440px) {
+    padding: 0 100px 0 0;
+  }
   h3 {
     font-size: 3.2rem;
     transition: color 0.4s;
