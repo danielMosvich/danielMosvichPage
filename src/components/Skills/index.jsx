@@ -54,34 +54,34 @@ function Skills() {
     <Container>
       <h2>Skills</h2>
       <CardsContainer>
-        <Card url="../../../public/tech/html.png" title="html"></Card>
-        <Card url="../../../public/tech/css.png" title="css"></Card>
+        <Card url="/tech/html.png" title="html"></Card>
+        <Card url="/tech/css.png" title="css"></Card>
         <Card
-          url="../../../public/tech/javascript.png"
+          url="/tech/javascript.png"
           title="javascript"
         ></Card>
-        <Card url="../../../public/tech/jquery.png" title="jquery"></Card>
-        <Card url="../../../public/tech/bootstrap.png" title="bootstrap"></Card>
-        <Card url="../../../public/tech/sass.png" title="sass"></Card>
-        <Card url="../../../public/tech/jquery.png" title="jquery"></Card>
-        <Card url="../../../public/tech/git.png" title="git"></Card>
-        <Card url="../../../public/tech/react.png" title="react"></Card>
+        <Card url="/tech/jquery.png" title="jquery"></Card>
+        <Card url="/tech/bootstrap.png" title="bootstrap"></Card>
+        <Card url="/tech/sass.png" title="sass"></Card>
+        <Card url="/tech/jquery.png" title="jquery"></Card>
+        <Card url="/tech/git.png" title="git"></Card>
+        <Card url="/tech/react.png" title="react"></Card>
         <Card
-          url="../../../public/tech/styledComponents.png"
+          url="/tech/styledComponents.png"
           title="styled Components"
         ></Card>
         <Card
-          url="../../../public/tech/typescript.png"
+          url="/tech/typescript.png"
           title="typeScript"
         ></Card>
         <Card
-          url="../../../public/tech/material.png"
+          url="/tech/material.png"
           title="material ui"
         ></Card>
-        <Card url="../../../public/tech/next.png" title="next"></Card>
-        <Card url="../../../public/tech/nodejs.webp" title="nodejs"></Card>
-        <Card url="../../../public/tech/figma.png" title="figma"></Card>
-        <Card url="../../../public/tech/photoshop.png" title="photoshop"></Card>
+        <Card url="/tech/next.png" title="next"></Card>
+        <Card url="/tech/nodejs.webp" title="nodejs"></Card>
+        <Card url="/tech/figma.png" title="figma"></Card>
+        <Card url="/tech/photoshop.png" title="photoshop"></Card>
       </CardsContainer>
     </Container>
   );

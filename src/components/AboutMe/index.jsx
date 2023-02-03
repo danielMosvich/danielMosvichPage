@@ -104,7 +104,7 @@ function AboutMe({}) {
     <Container>
       <ContainerLogo>
         <Buble1>
-          <img src="../../../public/daniray.svg" alt="daniray logo" />
+          <img src="/daniray.svg" alt="daniray logo" />
         </Buble1>
         {/* <Buble2 />
         <Buble3 /> */}

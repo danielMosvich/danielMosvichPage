@@ -181,7 +181,7 @@ function Contact() {
       <AllData>
         <ContainerData>
           <Head>
-            <img src="../../../public/daniray.svg" alt="" />
+            <img src="/daniray.svg" alt="" />
             <h3>Daniel Mosvich</h3>
             <p>contactame en mis redes :D</p>
           </Head>
@@ -194,18 +194,18 @@ function Contact() {
               <h4>Redes</h4>
               <a href="#">
                 <p>GitHub</p>
-                <img src="../../../public/icons/github.png" alt="" />
+                <img src="/icons/github.png" alt="" />
               </a>
               <a href="#">
                 <p>LinkedIn</p>
-                <img src="../../../public/icons/linkedin.png" alt="" />
+                <img src="/icons/linkedin.png" alt="" />
               </a>
             </RedesContainer>
           </Body>
         </ContainerData>
 
         <ContainerDraw>
-          <img src="../../../public/characters/character4.png" alt="" />
+          <img src="/characters/character4.png" alt="" />
         </ContainerDraw>
       </AllData>
     </Container>

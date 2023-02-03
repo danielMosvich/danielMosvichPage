@@ -73,7 +73,7 @@ function NavBar({ themeToggle, theme }) {
       <ContainerLogo>
         <img
           ref={logo}
-          src="../../../public/daniray.svg"
+          src="/daniray.svg"
           alt="daniel mosvich icon"
         />
       </ContainerLogo>
@@ -88,6 +88,7 @@ function NavBar({ themeToggle, theme }) {
         <a href="#">Skills</a>
         <a href="#">Works</a>
         <a href="#">Contact</a> */}
+        {/* bru */}
         <ToggleTheme themeToggle={themeToggle} theme={theme} />
       </ContainerNav>
     </Container>

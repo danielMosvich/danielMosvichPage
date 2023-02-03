@@ -112,7 +112,7 @@ export default function Character({ coords }) {
       <ImgContainer1>
         <img
           
-          src="../../../public/characters/character1.png"
+          src="characters/character1.png"
           alt="character image"
           style={styled1}
         />
@@ -120,7 +120,7 @@ export default function Character({ coords }) {
       <ImgContainer2>
         <img
           
-          src="../../../public/characters/character2.png"
+          src="characters/character2.png"
           alt="character image"
           style={styled2}
         />
@@ -128,7 +128,7 @@ export default function Character({ coords }) {
       <ImgContainer3>
         <img
           
-          src="../../../public/characters/character3.png"
+          src="characters/character3.png"
           alt="character image"
           style={styled3}
         />

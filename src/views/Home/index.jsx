@@ -53,7 +53,7 @@ function Home({setLoad, themeToggle, theme}) {
       <AboutMe id="aboutMe" coords={coords} />
       <Skills />
       <WaveContainer style={styledState}>
-        <img src="../../public/wave.png" alt="" />
+        <img src="/wave.png" alt="" />
       </WaveContainer>
       <Contact />
     </ContainerHome>
