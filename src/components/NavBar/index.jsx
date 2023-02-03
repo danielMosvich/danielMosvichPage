@@ -7,7 +7,7 @@ import LinkHeader from "./LinkHeader";
 
 const Container = styled.div`
   width: 100%;
-  height: 80px;
+  height: 60px;
   display: flex;
   /* box-shadow: 0px 4px 15px ${(props) => props.theme.shadowColor}; */
   background-color: ${(props) => props.theme.backgroundColorBlur};
@@ -24,8 +24,8 @@ const ContainerLogo = styled.div`
   align-items: center;
   justify-content: center;
   img {
-    height: 60px;
-    width: 60px;
+    height: 45px;
+    width: 45px;
     object-fit: contain;
   }
   @media (max-width: 1500px) {
@@ -36,7 +36,7 @@ const ContainerLogo = styled.div`
     }
 `;
 const ContainerNav = styled.div`
-  background-color: red;
+  /* background-color: red; */
   width: 50%;
   height: 100%;
   display: flex;
@@ -54,17 +54,11 @@ const ContainerNav = styled.div`
     font-size: 1.2rem;
     font-weight: 700;
     text-decoration: none;
-    /* border-bottom: 3px solid transparent; */
     transition: color, border, 0.4s;
-    /* &:hover {
-      border-bottom: 3px solid ${(props) => props.theme.primaryColor};
-      
-      
-    } */
   }
 `;
 
-function Header({ themeToggle, theme }) {
+function NavBar({ themeToggle, theme }) {
   const logo = useRef(null);
   useEffect(() => {
     gsap.to(logo.current, {
@@ -99,4 +93,4 @@ function Header({ themeToggle, theme }) {
     </Container>
   );
 }
-export default Header;
+export default NavBar;

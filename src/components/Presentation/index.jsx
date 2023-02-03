@@ -5,16 +5,27 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
+  padding: 0 300px;
+  @media (max-width: 1500px) {
+    padding: 0 100px;
+  }
+  @media (max-width: 1200px) {
+    padding: 0 50px;
+  }
+  @media (max-width: 800px) {
+    padding: 0 20px;
+  }
+  @media (max-width: 400px) {
+    padding: 0 10px;
+  }
 `;
 const DataContainer = styled.div`
-  padding: 0 0px 0 300px;
   width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   transition: background 0.4s;
-  /* background-color: blue; */
   h2 {
     font-size: 5rem;
     text-transform: uppercase;
@@ -34,20 +45,50 @@ const DataContainer = styled.div`
     transition: color 0.4s;
   }
   div {
-    margin: 10px 0 0;
+    margin-top: 10px;
     display: flex;
     gap: 10px;
   }
-  @media (max-width: 1700px) {
-    padding: 0 0 0 200px;
+  @media (max-width: 1500px) {
+    h2{
+      font-size: 4rem;
+    }
+    h3{
+      font-size: 1.5rem;
+    }
   }
-  @media (max-width: 1440px) {
-    padding: 0 0 0 100px;
-    width: 50%;
+  @media (max-width: 1200px) {
+    h2{
+      font-size: 3rem;
+    }
+    h3{
+      font-size: 1.2rem;
+    }
+    p{
+      font-size: 1rem;
+    }
   }
-  @media (max-width: 700px) {
-    width: 100%;
-    padding: 0 50px;
+  @media (max-width: 800px) {
+    h2{
+      font-size: 2.5rem;
+    }
+    h3{
+      font-size: 1rem;
+    }
+    p{
+      font-size: 0.8rem;
+    }
+  }
+  @media (max-width: 400px) {
+    h2{
+      font-size: 1.7rem;
+    }
+    h3{
+      font-size: 0.9rem;
+    }
+    p{
+      font-size: 0.7rem;
+    }
   }
 `;
 
@@ -70,7 +111,6 @@ function Presentation({coords}) {
           <GlobalButton padding={"15px"} outlined>
             About me
           </GlobalButton>
-          <GlobalButton />
         </div>
       </DataContainer>
       <Character coords={coords}/>

@@ -4,33 +4,48 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
+  /* background-color: white; */
+  padding: 0 300px;
+  @media (max-width: 1500px) {
+    padding: 0 100px;
+  }
+  @media (max-width: 1200px) {
+    padding: 0 50px;
+  }
+  @media (max-width: 800px) {
+    padding: 0 20px;
+  }
+  @media (max-width: 800px) {
+    padding: 0 10px;
+  }
 `;
 
 const ContainerLogo = styled.div`
-  width: 40%;
-  padding: 0 0 0 300px;
+  width: 30%;
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
-  /* background-color: red; */
-  @media (max-width: 1700px) {
-    padding: 0 0 0 200px;
-  }
-  @media (max-width: 1440px) {
-    padding: 0 0 0 100px;
-    justify-content: center;
-  }
+  /* background-color: #ff00004c; */
 `;
 
 const Buble1 = styled.div`
-  width: 350px;
-  height: 350px;
+  width: 280px;
+  height: 280px;
   border-radius: 10px;
   position: absolute;
   z-index: 4;
-  @media (max-width: 1700px) {
-    width: 300px;
-    height: 300px;
+  @media (max-width: 1500px) {
+    width: 250px;
+    height: 250px;
+  }
+  @media (max-width: 1200px) {
+    width: 150px;
+    height: 150px;
+  }
+  @media (max-width: 800px) {
+    width: 100px;
+    height: 100px;
   }
   img {
     object-fit: contain;
@@ -51,17 +66,10 @@ const Buble1 = styled.div`
 `;
 
 const ContainerInformation = styled.div`
-  width: 60%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 300px 0 0;
-  @media (max-width: 1700px) {
-    padding: 0 200px 0 0;
-  }
-  @media (max-width: 1440px) {
-    padding: 0 100px 0 0;
-  }
   h3 {
     font-size: 3.2rem;
     transition: color 0.4s;
@@ -72,6 +80,22 @@ const ContainerInformation = styled.div`
     font-weight: 500;
     transition: color 0.4s;
     color: ${(props) => props.theme.textColor2};
+  }
+  @media (max-width: 1200px) {
+    h3{
+      font-size: 2rem;
+    }
+    p{
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 900px) {
+    h3{
+      font-size: 2rem;
+    }
+    p{
+      font-size: 0.7rem;
+    }
   }
 `;
 function AboutMe({}) {

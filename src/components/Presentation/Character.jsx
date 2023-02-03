@@ -2,35 +2,31 @@ import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 const Container = styled.div`
-  /* padding: 100px 150px 0 0; */
   width: 40%;
   height: 100%;
   display: flex;
   transition: background 0.4s;
   align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+
   position: relative;
-  background-color: green;
-  @media (max-width: 1440px) {
-    width: 50%;
-    padding: 0;
-  }
-  @media (max-width: 700px) {
-    display:none;
-  }
+  padding-top: 80px;
 `;
 const ImgContainer1 = styled.div`
-/* background-color: red; */
   /* ANIMATION */
-  height:724px;
+  width: 100%;
   object-fit: cover;
-  left: -40px;
-  bottom: 70px;
-  position: absolute;
   z-index: 4;
   animation-name: character1;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+  img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+  }
   @keyframes character1 {
     0% {
       transform: translate(-5px, -5px);
@@ -42,30 +38,21 @@ const ImgContainer1 = styled.div`
       transform: translate(-5px, -5px);
     }
   }
-  @media (max-width: 950px) {
-    height:400px;
-    bottom:350px;
-    left:50px;
-  }
-  @media (max-width: 700px) {
-    display:none;
-  }
-  img{
-    height:100%;
-  }
 `;
 const ImgContainer2 = styled.div`
   position: absolute;
   z-index: 3;
-  left: -40px;
-  bottom: 70px;
   /* ANIMATION */
-  height:724px;
+  width: 100%;
   animation-name: character2;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  /* animation-delay: 0.4s; */
+  img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+  }
   @keyframes character2 {
     0% {
       transform: translate(-5px, -5px);
@@ -77,30 +64,21 @@ const ImgContainer2 = styled.div`
       transform: translate(-5px, -5px);
     }
   }
-  @media (max-width: 950px) {
-    height:400px;
-    bottom:350px;
-    left:50px;
-  }
-  @media (max-width: 700px) {
-    display:none;
-  }
-  img{
-    height:100%;
-  }
 `;
 const ImgContainer3 = styled.div`
   position: absolute;
   z-index: 2;
-  left: -40px;
-  bottom: 70px;
   /* ANIMATION */
-  height:724px;
+  width: 100%;
   animation-name: character3;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  /* animation-delay: 0.6s; */
+  img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+  }
   @keyframes character3 {
     0% {
       transform: translate(-5px, -5px);
@@ -112,28 +90,10 @@ const ImgContainer3 = styled.div`
       transform: translate(-5px, -5px);
     }
   }
-  @media (max-width: 950px) {
-    height:400px;
-    bottom:350px;
-    left:50px;
-  }
-  @media (max-width: 700px) {
-    display:none;
-  }
-  img{
-    height:100%;
-  }
 `;
 
-// !-------------------------------
-const Image1 = styled.img``;
-const Image2 = styled.img``;
-const Image3 = styled.img``;
 export default function Character({ coords }) {
   const { x, y } = coords;
-  const img1 = useRef(null);
-  const img2 = useRef(null);
-  const img3 = useRef(null);
 
   const [styled1, setStyled1] = useState({ transform: "" });
   const [styled2, setStyled2] = useState({ transform: "" });
@@ -152,7 +112,7 @@ export default function Character({ coords }) {
     <Container>
       <ImgContainer1>
         <img
-          ref={img1}
+          
           src="../../../public/characters/character1.png"
           alt="character image"
           style={styled1}
@@ -160,7 +120,7 @@ export default function Character({ coords }) {
       </ImgContainer1>
       <ImgContainer2>
         <img
-          ref={img2}
+          
           src="../../../public/characters/character2.png"
           alt="character image"
           style={styled2}
@@ -168,7 +128,7 @@ export default function Character({ coords }) {
       </ImgContainer2>
       <ImgContainer3>
         <img
-          ref={img3}
+          
           src="../../../public/characters/character3.png"
           alt="character image"
           style={styled3}

@@ -10,6 +10,16 @@ const Container = styled.div`
   border-radius: 10px;
   display: flex;
   align-items: center;
+  font-size: ${(props)=> props.size ? props.size : "1rem"};
+  @media (max-width: 1500px) {
+    font-size: calc( ${(props => props.size ? props.size : "1rem")}/ 1.1);
+  }
+  @media (max-width: 1200px) {
+    padding: 10px;
+  }
+  @media (max-width: 800px) {
+    font-size: calc( ${(props => props.size ? props.size : "1rem")}/ 1.5);
+  }
 `;
 const ContainerOutline = styled.div`
   font-weight: bold;
@@ -22,6 +32,16 @@ const ContainerOutline = styled.div`
   border: 2px solid ${(props) => props.theme.primaryColor};
   display: flex;
   align-items: center;
+  font-size: ${(props)=> props.size ? props.size : "1rem"};
+  @media (max-width: 1500px) {
+    font-size: calc( ${(props => props.size ? props.size : "1rem")}/ 1.1);
+  }
+  @media (max-width: 1200px) {
+    padding: 10px;
+  }
+  @media (max-width: 800px) {
+    font-size: calc( ${(props => props.size ? props.size : "1rem")}/ 1.5);
+  }
 `;
 export default function GlobalButton({
   children,
@@ -29,15 +49,16 @@ export default function GlobalButton({
   padding,
   color,
   outlined,
+  size
 }) {
   return (
     <>
       {outlined ? (
-        <ContainerOutline bg={bg} padding={padding} color={color}>
+        <ContainerOutline bg={bg} padding={padding} color={color} size={size}>
           {children}
         </ContainerOutline>
       ) : (
-        <Container bg={bg} padding={padding} color={color}>
+        <Container bg={bg} padding={padding} color={color} size={size}>
           {children}
         </Container>
       )}

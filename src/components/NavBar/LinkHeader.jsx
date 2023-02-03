@@ -1,6 +1,6 @@
 import styled from "styled-components";
 const ContainerLink = styled.a`
-  background-color: green;
+  /* background-color: green; */
   cursor: pointer;
   padding: 0 30px;
   /* @media (max-width: 1200px) {

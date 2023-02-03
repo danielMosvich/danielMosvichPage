@@ -9,10 +9,17 @@ const Container = styled.div`
     text-align: center;
     font-size: 5rem;
     color: ${(props) => props.theme.primaryColor};
+    text-shadow: 0px 0px 30px ${(props) => props.theme.primaryColorGlow2};
   }
+  @media (max-width: 800px) {
+    h2{
+      font-size: 3rem;
+    }
+  }
+  position: sticky;
+  top: 70px;
 `;
 const CardsContainer = styled.div`
-background-color: red;
   margin-top: 50px;
   width: 100%;
   display: grid;
@@ -21,11 +28,18 @@ background-color: red;
   justify-content: center;
   gap: 30px;
   @media (max-width: 1200px) {
-    grid-template-columns: repeat(4,180px);
-  }
-  @media (max-width: 900px) {
-    grid-template-columns: repeat(4,120px);
+    grid-template-columns: repeat(4,150px);
     grid-auto-rows: 100px;
+  }
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(4,80px);
+    grid-auto-rows: 80px;
+    gap: 15px;
+    padding: 0 20px;
+  }
+  @media (max-width: 400px) {
+    grid-template-columns: repeat(3,80px);
+    padding: 0 10px;
   }
 `;
 

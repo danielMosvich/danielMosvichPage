@@ -3,10 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
   padding: 20px;
   gap: 15px;
-  /* width: 200px;
-    height: 150px; */
   border-radius: 10px;
-  /* color: #; */
   background-color: ${(props) => props.theme.cardBackground};
   transition: background 0.4s;
   display: flex;
@@ -29,8 +26,20 @@ const Container = styled.div`
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     padding: 0px;
+    justify-content: center;
+    gap: 10px;
+    img {
+      height: 40px;
+    }
+    p {
+      text-transform: capitalize;
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+  }
+  @media (max-width: 800px) {
     justify-content: center;
     img {
       height: 40px;
