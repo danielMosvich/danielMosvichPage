@@ -47,8 +47,8 @@ function Home({setLoad, themeToggle, theme}) {
   },[])
   return (
     <ContainerHome>
-      <p style={{position:"fixed",color:"red", zIndex:10}}>{scrollY}</p>
-      <NavBar themeToggle={themeToggle} theme={theme}/>
+      {/* <p style={{position:"fixed",color:"red", zIndex:10}}>{scrollY}</p> */}
+      {/* <NavBar themeToggle={themeToggle} theme={theme}/> */}
       <Presentation id="presentation" coords={coords}/>
       <AboutMe id="aboutMe" coords={coords} />
       <Skills />

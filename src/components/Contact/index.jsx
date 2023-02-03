@@ -7,6 +7,7 @@ const Container = styled.div`
   padding: 0 300px;
   display: flex;
   position: relative;
+  height: 100vh;
   @media (max-width: 1500px) {
     padding: 0 100px;
   }
@@ -24,7 +25,7 @@ const Container = styled.div`
 const AllData = styled.div`
   width: 100%;
   display: flex;
-  height: 100vh;
+  /* height: 100vh; */
   /* background-color: black; */
 `;
 const ContainerDraw = styled.div`

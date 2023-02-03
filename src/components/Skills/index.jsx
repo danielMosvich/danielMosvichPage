@@ -16,11 +16,17 @@ const Container = styled.div`
       font-size: 3rem;
     }
   }
+  @media (max-width: 400px) {
+    h2{
+      font-size: 3rem;
+    }
+    height: 120vh;
+  }
   position: sticky;
   top: 70px;
 `;
 const CardsContainer = styled.div`
-  margin-top: 50px;
+  margin-top: 20px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 180px);

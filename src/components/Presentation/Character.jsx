@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import { useRef } from "react";
 const Container = styled.div`
   width: 40%;
   height: 100%;
