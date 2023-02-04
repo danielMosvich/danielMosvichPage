@@ -4,13 +4,13 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
-  /* background-color: white; */
   padding: 0 300px;
   @media (max-width: 1500px) {
     padding: 0 100px;
   }
   @media (max-width: 1200px) {
     padding: 0 50px;
+    height: 70vh;
   }
   @media (max-width: 800px) {
     padding: 0 20px;

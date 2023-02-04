@@ -8,6 +8,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   height: 100vh;
+  z-index: 6;
   @media (max-width: 1500px) {
     padding: 0 100px;
   }
@@ -20,8 +21,7 @@ const Container = styled.div`
   @media (max-width: 400px) {
     padding: 0 10px;
   }
-  z-index: 6;
-  /* background-color: red; */
+  
 `;
 const AllData = styled.div`
   width: 100%;

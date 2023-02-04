@@ -14,7 +14,7 @@ const Container = styled.div`
     text-shadow: 0px 0px 30px ${(props) => props.theme.primaryColorGlow2};
   }
   position: sticky;
-  top: 100px;
+  top: 70px;
   @media (max-width: 800px) {
     h2 {
       font-size: 3rem;
@@ -34,7 +34,7 @@ const CardsContainer = styled.div`
   grid-auto-rows: 130px;
   justify-content: center;
   gap: 30px;
-  /* background-color: red; */
+  position: relative;
   z-index: 3;
   @media (max-width: 1200px) {
     grid-template-columns: repeat(4, 150px);
