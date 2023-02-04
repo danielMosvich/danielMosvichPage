@@ -19,7 +19,7 @@ const WaveContainer = styled.div`
   position: relative;
   background-color: ${(props) => props.theme.primaryColor};
   margin-top: 200px;
-  z-index: 4;
+  z-index: 6;
   img{
     position: absolute;
     bottom: 0px;
