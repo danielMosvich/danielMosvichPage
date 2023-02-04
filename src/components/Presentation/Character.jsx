@@ -10,12 +10,15 @@ const Container = styled.div`
 
   position: relative;
   padding-top: 60px;
-  
+  /* background-color: red; */
+
+  @media (max-width: 1200px) {
+    padding-top: 0px;
+  }
   @media (max-width: 800px) {
-    /* background-color: red; */
     width: 60%;
     position: absolute;
-    opacity: 0.2;
+    opacity: 0.1;
     filter: grayscale(1);
   }
   @media (max-width: 400px) {
@@ -35,10 +38,10 @@ const ImgContainer1 = styled.div`
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   @keyframes character1 {
     0% {
@@ -51,6 +54,9 @@ const ImgContainer1 = styled.div`
       transform: translate(-5px, -5px);
     }
   }
+  @media (max-width: 800px) {
+    transform: none;
+  }
 `;
 const ImgContainer2 = styled.div`
   position: absolute;
@@ -61,10 +67,10 @@ const ImgContainer2 = styled.div`
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   @keyframes character2 {
     0% {
@@ -87,10 +93,10 @@ const ImgContainer3 = styled.div`
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   @keyframes character3 {
     0% {
@@ -125,7 +131,6 @@ export default function Character({ coords }) {
     <Container>
       <ImgContainer1>
         <img
-          
           src="characters/character1.png"
           alt="character image"
           style={styled1}
@@ -133,7 +138,6 @@ export default function Character({ coords }) {
       </ImgContainer1>
       <ImgContainer2>
         <img
-          
           src="characters/character2.png"
           alt="character image"
           style={styled2}
@@ -141,7 +145,6 @@ export default function Character({ coords }) {
       </ImgContainer2>
       <ImgContainer3>
         <img
-          
           src="characters/character3.png"
           alt="character image"
           style={styled3}
