@@ -5,6 +5,7 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   padding: 0 300px;
+  /* background-color: red; */
   @media (max-width: 1500px) {
     padding: 0 100px;
   }
@@ -17,17 +18,25 @@ const Container = styled.div`
   }
   @media (max-width: 400px) {
     padding: 0 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 50vh;
+    gap: 30px;
   }
 `;
 
 const ContainerLogo = styled.div`
   width: 30%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  /* background-color: #ff00004c; */
+  /* background-color: #a6ff00; */
+  @media (max-width: 400px) {
+    height: 20%;
+  }
 `;
 
 const Buble1 = styled.div`
@@ -72,16 +81,19 @@ const Buble1 = styled.div`
 
 const ContainerInformation = styled.div`
   width: 70%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* background-color: red; */
   h3 {
     font-size: 3.2rem;
     transition: color 0.4s;
     color: ${(props) => props.theme.textColor1};
+    margin-bottom: 10px;
   }
   p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 1.1rem;
     font-weight: 500;
     transition: color 0.4s;
@@ -104,6 +116,7 @@ const ContainerInformation = styled.div`
     }
   }
   @media (max-width: 400px) {
+    height: 50%;
     h3 {
       font-size: 1.7rem;
     }
@@ -131,8 +144,6 @@ function AboutMe({}) {
           la tecnología y diseño me llevaron a especializarme en el desarrollo
           front-end.
         </p>
-        
-
         <p>
           Constantemente estoy aprendiendo nuevas tecnologías y tendencias
           (front-end y futuramente back-end), para mejorar mis habilidades para

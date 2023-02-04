@@ -17,7 +17,7 @@ const Container = styled.div`
   transition: background 0.4s;
   backdrop-filter: blur(50px);
   position: fixed;
-  z-index: 5;
+  z-index: 6;
   @media (max-width: 1500px) {
     padding: 0 100px;
   }

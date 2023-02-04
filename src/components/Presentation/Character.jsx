@@ -10,7 +10,18 @@ const Container = styled.div`
 
   position: relative;
   padding-top: 60px;
-
+  
+  @media (max-width: 800px) {
+    /* background-color: red; */
+    width: 60%;
+    position: absolute;
+    opacity: 0.2;
+    filter: grayscale(1);
+  }
+  @media (max-width: 400px) {
+    /* background-color: red; */
+    width: 80%;
+  }
   /* @media (max-width:800px) {
     padding-top: 0;
   } */
