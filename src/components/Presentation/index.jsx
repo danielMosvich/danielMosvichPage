@@ -21,7 +21,7 @@ const Container = styled.div`
   }
   @media (max-width: 400px) {
     padding: 0 10px;
-    height: 70vh;
+    /* height: 70vh; */
   }
 `;
 const DataContainer = styled.div`
