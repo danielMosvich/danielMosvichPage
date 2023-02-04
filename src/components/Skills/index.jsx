@@ -5,6 +5,8 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   margin-top: 100px;
+  /* background-color: red; */
+  z-index: 3;
   h2 {
     text-align: center;
     font-size: 5rem;
@@ -32,6 +34,8 @@ const CardsContainer = styled.div`
   grid-auto-rows: 130px;
   justify-content: center;
   gap: 30px;
+  /* background-color: red; */
+  z-index: 3;
   @media (max-width: 1200px) {
     grid-template-columns: repeat(4, 150px);
     grid-auto-rows: 100px;
