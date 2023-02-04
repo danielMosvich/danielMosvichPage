@@ -90,6 +90,7 @@ const DataContainer = styled.div`
     p{
       font-size: 0.7rem;
     }
+    padding-top: 60px;
   }
 `;
 

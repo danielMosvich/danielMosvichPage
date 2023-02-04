@@ -41,6 +41,7 @@ const ContainerLogo = styled.div`
     height: 45px;
     width: 45px;
     object-fit: contain;
+    z-index: 3;
   }
   @media (max-width: 1500px) {
     width: 20%;

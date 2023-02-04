@@ -13,6 +13,7 @@ const Container = styled.div`
 `;
 const IconContainer = styled.button`
   background-color: transparent;
+  z-index: 3;
   width: 40px;
   height: 40px;
   display: flex;
@@ -33,10 +34,10 @@ const OptionsMenu = styled.div`
   width: 100%;
   height: 100vh;
   position: fixed;
-  top: 60px;
+  z-index: 2;
+  top: 0px;
   right: -100vw;
   background-color: ${(props) => props.theme.backgroundColor};
-  /* transition:  0.8s ease; */
   transition: transform ,background, 0.4s;
 `;
 const LinksContainer = styled.div`
@@ -50,7 +51,7 @@ const LinksContainer = styled.div`
   font-size: 1.7rem;
   font-weight: 600;
   span{
-    height: 100px;
+    height: 60px;
     display: flex;
     align-items: center;
   }

@@ -11,9 +11,9 @@ const Container = styled.div`
   position: relative;
   padding-top: 80px;
 
-  @media (max-width:800px) {
+  /* @media (max-width:800px) {
     padding-top: 0;
-  }
+  } */
 `;
 const ImgContainer1 = styled.div`
   /* ANIMATION */

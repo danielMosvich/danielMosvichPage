@@ -2,7 +2,6 @@ import styled from "styled-components";
 const ContainerAnimation = styled.div`
   width: 100%;
   height: 100%;
-  /* background-color: blue; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +15,10 @@ const ContainerAnimation = styled.div`
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
+    @media (max-width: 800px) {
+      width: 30px;
+    height: 30px;
+    }
   }
 
   div:nth-child(1) {
