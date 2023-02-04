@@ -81,32 +81,33 @@ const ContainerInformation = styled.div`
     color: ${(props) => props.theme.textColor1};
   }
   p {
+    margin-bottom: 20px;
     font-size: 1.1rem;
     font-weight: 500;
     transition: color 0.4s;
     color: ${(props) => props.theme.textColor2};
   }
   @media (max-width: 1200px) {
-    h3{
+    h3 {
       font-size: 2rem;
     }
-    p{
+    p {
       font-size: 1rem;
     }
   }
   @media (max-width: 800px) {
-    h3{
+    h3 {
       font-size: 2rem;
     }
-    p{
+    p {
       font-size: 0.7rem;
     }
   }
   @media (max-width: 400px) {
-    h3{
+    h3 {
       font-size: 1.7rem;
     }
-    p{
+    p {
       font-size: 0.6rem;
     }
   }
@@ -123,15 +124,21 @@ function AboutMe({}) {
       </ContainerLogo>
 
       <ContainerInformation>
-        <h3>Daniel Reyes Mosvich</h3>
+        <h3>Quien soy?</h3>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod quaerat
-          sed, pariatur est nobis, eum illo neque quidem itaque nesciunt
-          voluptatum similique iste earum aspernatur, facilis vitae! Id, nostrum
-          saepe. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Reiciendis numquam praesentium, quia enim veritatis alias odio
-          sapiente magnam ipsum? Amet ipsum corporis iure, voluptate dolores
-          nulla impedit reprehenderit ullam odio.
+          Hola! Mi nombre es Daniel, soy un desarrollador front-end con nivel
+          intermedio y un artista digital desde hace muchos años, Mi pasión por
+          la tecnología y diseño me llevaron a especializarme en el desarrollo
+          front-end.
+        </p>
+        
+
+        <p>
+          Constantemente estoy aprendiendo nuevas tecnologías y tendencias
+          (front-end y futuramente back-end), para mejorar mis habilidades para
+          ofrecer soluciones a mis clientes, gracias por tomarte el tiempo de
+          conocerme y estoy emocionado de ver como puedo ayudar en sus futuros
+          proyectos
         </p>
       </ContainerInformation>
     </Container>

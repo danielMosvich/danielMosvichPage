@@ -29,7 +29,7 @@ const DataContainer = styled.div`
   transition: background 0.4s;
   h2 {
     font-size: 5rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 800;
     color: ${(props) => props.theme.primaryColor};
     text-shadow: 0px 0px 30px ${(props) => props.theme.primaryColorGlow2};
@@ -98,20 +98,20 @@ function Presentation({coords}) {
   return (
     <Container>
       <DataContainer>
-        <h2>Daniel Mosvich</h2>
-        <h3>Front-end Web Developer & Digital Artist</h3>
-        <p>
+        <h2>Hola, soy Daniel Mosvich</h2>
+        <h3>front-web developer & digital artist</h3>
+        {/* <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, nobis
           nostrum consequuntur temporibus sit quaerat labore deleniti! Qui,
           error velit alias excepturi quam minus aut ex veniam explicabo cum
           temporibus.
-        </p>
+        </p> */}
         <div>
           <GlobalButton padding={"15px"} color={"white"}>
-            About me
+            Proyectos
           </GlobalButton>
           <GlobalButton padding={"15px"} outlined>
-            About me
+            Descargar CV
           </GlobalButton>
         </div>
       </DataContainer>
