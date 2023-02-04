@@ -3,6 +3,10 @@ import { useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
   width: 50px;
   height: 30px;
   border-radius: 40px;
@@ -39,8 +43,8 @@ export default function ToggleTheme({ themeToggle, theme }) {
     themeToggle();
     toggle === false ? setToggle(true) : setToggle(false);
   }
-  useEffect(()=>{
-    theme === "dark" && setToggle(true)
-  },[])
+  useEffect(() => {
+    theme === "dark" && setToggle(true);
+  }, []);
   return <Container toggle={toggle} onClick={handleToggle}></Container>;
 }

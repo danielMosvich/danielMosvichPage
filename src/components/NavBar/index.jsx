@@ -4,8 +4,11 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import ToggleTheme from "./ToggleTheme";
 import LinkHeader from "./LinkHeader";
+import PhoneMenu from "./PhoneMenu";
 
 const Container = styled.div`
+  /* background-color: purple; */
+  padding: 0 300px;
   width: 100%;
   height: 60px;
   display: flex;
@@ -15,13 +18,24 @@ const Container = styled.div`
   backdrop-filter: blur(50px);
   position: fixed;
   z-index: 5;
+  @media (max-width: 1500px) {
+    padding: 0 100px;
+  }
+  @media (max-width: 1200px) {
+    padding: 0 50px;
+  }
+  @media (max-width: 800px) {
+    padding: 0 20px;
+  }
+  @media (max-width:400px) {
+    padding: 0 10px;
+  }
 `;
 const ContainerLogo = styled.div`
-  width: 50%;
+  width: 20%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   img {
     height: 45px;
@@ -32,22 +46,19 @@ const ContainerLogo = styled.div`
     width: 20%;
   }
   @media (max-width: 1200px) {
-      display: none;
-    }
+    display: none;
+  }
+  @media (max-width: 800px) {
+    display: flex;
+    width: 40%;
+  }
 `;
 const ContainerNav = styled.div`
-  /* background-color: red; */
-  width: 50%;
+  width: 80%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 1500px) {
-    width: 80%;
-  }
-  @media (max-width: 1200px) {
-      width:100%;
-    }
   a {
     text-transform: uppercase;
     color: ${(props) => props.theme.textColor1};
@@ -56,6 +67,19 @@ const ContainerNav = styled.div`
     text-decoration: none;
     transition: color, border, 0.4s;
   }
+  @media (max-width: 1500px) {
+    width: 80%;
+  }
+  @media (max-width: 1200px) {
+    width: 100%;
+    a{
+      font-size: 1rem;
+    }
+  }
+  @media (max-width:800px) {
+    display: none;
+  }
+  
 `;
 
 function NavBar({ themeToggle, theme }) {
@@ -71,14 +95,11 @@ function NavBar({ themeToggle, theme }) {
   return (
     <Container>
       <ContainerLogo>
-        <img
-          ref={logo}
-          src="/daniray.svg"
-          alt="daniel mosvich icon"
-        />
+        <img ref={logo} src="/daniray.svg" alt="daniel mosvich icon" />
       </ContainerLogo>
+      <PhoneMenu themeToggle={themeToggle} theme={theme}/>
       <ContainerNav>
-        <LinkHeader url="#presentation" title="Home" />
+        <LinkHeader url="uwu.com" title="Home" />
         <LinkHeader url="#presentation" title="About me" />
         <LinkHeader url="#presentation" title="Skills" />
         <LinkHeader url="#presentation" title="Works" />

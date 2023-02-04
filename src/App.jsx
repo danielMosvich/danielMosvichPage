@@ -14,28 +14,32 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 function App() {
-  const storageTheme = localStorage.getItem('theme')
-  const localTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const storageTheme = localStorage.getItem("theme");
+  const localTheme =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [load, setLoad] = useState(true);
-  const [theme, setTheme] = useState(storageTheme ? storageTheme : localTheme ? "dark" : "light");
+  const [theme, setTheme] = useState(
+    storageTheme ? storageTheme : localTheme ? "dark" : "light"
+  );
   function themeToggle() {
-    if(theme === "light"){
-      setTheme('dark')
-      localStorage.setItem('theme','dark')
-    } else{
-      setTheme('light')
-      localStorage.setItem('theme','light')
+    if (theme === "light") {
+      setTheme("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      setTheme("light");
+      localStorage.setItem("theme", "light");
     }
   }
   useEffect(() => {
     setLoad(false);
-    localStorage.setItem("theme",theme)
+    localStorage.setItem("theme", theme);
   }, []);
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <div className="App">
         <GlobalStyle />
-        {/* <Preload load={load} /> */}
+        <Preload load={load} />
         <Routes>
           <Route
             path="/"

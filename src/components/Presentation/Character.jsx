@@ -7,10 +7,13 @@ const Container = styled.div`
   transition: background 0.4s;
   align-items: center;
   justify-content: center;
-  /* background-color: red; */
 
   position: relative;
   padding-top: 80px;
+
+  @media (max-width:800px) {
+    padding-top: 0;
+  }
 `;
 const ImgContainer1 = styled.div`
   /* ANIMATION */

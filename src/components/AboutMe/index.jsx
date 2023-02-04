@@ -48,6 +48,10 @@ const Buble1 = styled.div`
     width: 100px;
     height: 100px;
   }
+  @media (max-width: 400px) {
+    width: 70px;
+    height: 70px;
+  }
   img {
     object-fit: contain;
 
@@ -90,12 +94,20 @@ const ContainerInformation = styled.div`
       font-size: 1rem;
     }
   }
-  @media (max-width: 900px) {
+  @media (max-width: 800px) {
     h3{
       font-size: 2rem;
     }
     p{
       font-size: 0.7rem;
+    }
+  }
+  @media (max-width: 400px) {
+    h3{
+      font-size: 1.7rem;
+    }
+    p{
+      font-size: 0.6rem;
     }
   }
 `;

@@ -1,32 +1,33 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
-
+import AnimateBuble from "./AnimateBuble";
 
 const Card_1 = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: ${props => props.theme.primaryColor};
+  background-color: ${(props) => props.theme.primaryColor};
   position: fixed;
   z-index: 10;
 `;
 const Card_2 = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: ${props => props.theme.secondColor};
+  background-color: ${(props) => props.theme.secondColor};
   position: fixed;
   z-index: 9;
 `;
 const Card_3 = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: ${props => props.theme.thirdColor};
+  background-color: ${(props) => props.theme.thirdColor};
   position: fixed;
   z-index: 8;
 `;
 
+
 export default function Preload({ load }) {
-  const [show,setShow] = useState(true)
+  const [show, setShow] = useState(true);
 
   const c1 = useRef();
   const c2 = useRef();
@@ -53,13 +54,14 @@ export default function Preload({ load }) {
         },2000)
       }, 2000);
     }
-
   }, [load]);
   return (
-    <div >
-      <Card_1 ref={c1} style={{display: show ? "block" : "none"}}> Cargando</Card_1>
-      <Card_2 ref={c2} style={{display: show ? "block" : "none"}}/>
-      <Card_3 ref={c3} style={{display: show ? "block" : "none"}}/>
+    <div>
+      <Card_1 ref={c1} style={{ display: show ? "block" : "none" }}>
+       <AnimateBuble />
+      </Card_1>
+      <Card_2 ref={c2} style={{ display: show ? "block" : "none" }} />
+      <Card_3 ref={c3} style={{ display: show ? "block" : "none" }} />
     </div>
   );
 }

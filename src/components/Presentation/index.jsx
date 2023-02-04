@@ -71,7 +71,7 @@ const DataContainer = styled.div`
   }
   @media (max-width: 800px) {
     h2{
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     h3{
       font-size: 1rem;

@@ -3,6 +3,9 @@ const ContainerLink = styled.a`
   /* background-color: green; */
   cursor: pointer;
   padding: 0 30px;
+  color: ${props => props.theme.textColor1};
+  transition: color 0.4s;
+  text-decoration: none;
   /* @media (max-width: 1200px) {
     padding: 0 10px;
     } */
@@ -23,7 +26,6 @@ const ContainerLink = styled.a`
   }
 `;
 const Container = styled.div`
-  /* background-color: blue; */
   padding: 5px 0;
   position: relative;
   transition: width 0.3s;
@@ -44,8 +46,8 @@ const Container = styled.div`
 `;
 export default function LinkHeader({ url, title }) {
   return (
-    <ContainerLink>
-      <Container href={url}>
+    <ContainerLink href={url}>
+      <Container >
         {title}
         <span></span>
       </Container>

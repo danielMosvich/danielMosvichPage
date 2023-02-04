@@ -9,6 +9,8 @@ export const lightTheme ={
     textColor1:"rgba(0, 0, 0, 0.80)",
     textColor2:"rgba(0, 0, 0, 0.50)",
 
+    textColorPure:"#000",
+
     shadowColor:"rgba(0,0,0,0.10)",
     cardBackground:"#fff"
 }
@@ -23,6 +25,8 @@ export const darkTheme = {
     textColor1:"rgba(255, 255, 255, 0.80)",
     textColor2:"rgba(255, 255, 255, 0.50)",
     
+    textColorPure:"#fff",
+
     shadowColor:"rgba(0,0,0,0.10)",
     cardBackground:"#353535"
 }

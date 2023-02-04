@@ -192,11 +192,11 @@ function Contact() {
             </ContactContainer>
             <RedesContainer>
               <h4>Redes</h4>
-              <a href="#">
+              <a href="https://github.com/danielMosvich" target={"_blank"}>
                 <p>GitHub</p>
                 <img src="/icons/github.png" alt="" />
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/jose-daniel-reyes-mosvich-53247a238/" target={"_blank"}>
                 <p>LinkedIn</p>
                 <img src="/icons/linkedin.png" alt="" />
               </a>

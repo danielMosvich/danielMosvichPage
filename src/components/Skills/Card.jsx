@@ -48,6 +48,15 @@ const Container = styled.div`
       display: none;
     }
   }
+  @media (max-width: 400px) {
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
 `;
 export default function ({ url, title }) {
   return (

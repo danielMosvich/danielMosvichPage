@@ -11,6 +11,8 @@ const Container = styled.div`
     color: ${(props) => props.theme.primaryColor};
     text-shadow: 0px 0px 30px ${(props) => props.theme.primaryColorGlow2};
   }
+  position: sticky;
+  top: 100px;
   @media (max-width: 800px) {
     h2{
       font-size: 3rem;
@@ -20,13 +22,11 @@ const Container = styled.div`
     h2{
       font-size: 3rem;
     }
-    height: 120vh;
   }
-  position: sticky;
-  top: 70px;
+  
 `;
-const CardsContainer = styled.div`
-  margin-top: 20px;
+const CardsContainer = styled.div` 
+  margin-top: 40px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 180px);
@@ -44,8 +44,10 @@ const CardsContainer = styled.div`
     padding: 0 20px;
   }
   @media (max-width: 400px) {
-    grid-template-columns: repeat(3,80px);
-    padding: 0 10px;
+    grid-template-columns: repeat(3,70px);
+    grid-auto-rows: 70px;
+    padding: 0px;
+    margin-top: 20px;
   }
 `;
 
@@ -63,7 +65,6 @@ function Skills() {
         <Card url="/tech/jquery.png" title="jquery"></Card>
         <Card url="/tech/bootstrap.png" title="bootstrap"></Card>
         <Card url="/tech/sass.png" title="sass"></Card>
-        <Card url="/tech/jquery.png" title="jquery"></Card>
         <Card url="/tech/git.png" title="git"></Card>
         <Card url="/tech/react.png" title="react"></Card>
         <Card
