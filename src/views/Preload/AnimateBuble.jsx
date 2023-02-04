@@ -18,76 +18,76 @@ const ContainerAnimation = styled.div`
     animation-iteration-count: 1;
   }
 
-  div:nth-child(1){
+  div:nth-child(1) {
     animation-name: buble1;
     @keyframes buble1 {
-      0%{
+      0% {
         transform: translateY(0px);
       }
-      50%{
+      50% {
         transform: translateY(-50px);
       }
-      100%{
+      100% {
         transform: translateY(0px);
       }
     }
   }
-  div:nth-child(2){
+  div:nth-child(2) {
     animation-name: buble2;
     animation-delay: 0.3s;
     @keyframes buble2 {
-      0%{
+      0% {
         transform: translateY(0px);
       }
-      50%{
+      50% {
         transform: translateY(-50px);
       }
-      100%{
+      100% {
         transform: translateY(0px);
       }
     }
   }
-  div:nth-child(3){
+  div:nth-child(3) {
     animation-name: buble3;
     animation-delay: 0.6s;
     @keyframes buble3 {
-      0%{
+      0% {
         transform: translateY(0px);
       }
-      50%{
+      50% {
         transform: translateY(-50px);
       }
-      100%{
+      100% {
         transform: translateY(0px);
       }
     }
   }
-  div:nth-child(4){
+  div:nth-child(4) {
     animation-name: buble4;
     animation-delay: 0.9s;
     @keyframes buble4 {
-      0%{
+      0% {
         transform: translateY(0px);
       }
-      50%{
+      50% {
         transform: translateY(-50px);
       }
-      100%{
+      100% {
         transform: translateY(0px);
       }
     }
   }
-  div:nth-child(5){
+  div:nth-child(5) {
     animation-name: buble5;
     animation-delay: 1.2s;
     @keyframes buble5 {
-      0%{
+      0% {
         transform: translateY(0px);
       }
-      50%{
+      50% {
         transform: translateY(-50px);
       }
-      100%{
+      100% {
         transform: translateY(0px);
       }
     }

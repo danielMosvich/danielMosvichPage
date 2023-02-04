@@ -14,18 +14,17 @@ const Container = styled.div`
   position: sticky;
   top: 100px;
   @media (max-width: 800px) {
-    h2{
+    h2 {
       font-size: 3rem;
     }
   }
   @media (max-width: 400px) {
-    h2{
+    h2 {
       font-size: 3rem;
     }
   }
-  
 `;
-const CardsContainer = styled.div` 
+const CardsContainer = styled.div`
   margin-top: 40px;
   width: 100%;
   display: grid;
@@ -34,17 +33,17 @@ const CardsContainer = styled.div`
   justify-content: center;
   gap: 30px;
   @media (max-width: 1200px) {
-    grid-template-columns: repeat(4,150px);
+    grid-template-columns: repeat(4, 150px);
     grid-auto-rows: 100px;
   }
   @media (max-width: 800px) {
-    grid-template-columns: repeat(4,80px);
+    grid-template-columns: repeat(4, 80px);
     grid-auto-rows: 80px;
     gap: 15px;
     padding: 0 20px;
   }
   @media (max-width: 400px) {
-    grid-template-columns: repeat(3,70px);
+    grid-template-columns: repeat(3, 70px);
     grid-auto-rows: 70px;
     padding: 0px;
     margin-top: 20px;
@@ -58,27 +57,15 @@ function Skills() {
       <CardsContainer>
         <Card url="/tech/html.png" title="html"></Card>
         <Card url="/tech/css.png" title="css"></Card>
-        <Card
-          url="/tech/javascript.png"
-          title="javascript"
-        ></Card>
+        <Card url="/tech/javascript.png" title="javascript"></Card>
         <Card url="/tech/jquery.png" title="jquery"></Card>
-        <Card url="/tech/bootstrap.png" title="bootstrap"></Card>
+        <Card url="/tech/unkwow.png" title="bootstrap"></Card>
         <Card url="/tech/sass.png" title="sass"></Card>
         <Card url="/tech/git.png" title="git"></Card>
         <Card url="/tech/react.png" title="react"></Card>
-        <Card
-          url="/tech/styledComponents.png"
-          title="styled Components"
-        ></Card>
-        <Card
-          url="/tech/typescript.png"
-          title="typeScript"
-        ></Card>
-        <Card
-          url="/tech/material.png"
-          title="material ui"
-        ></Card>
+        <Card url="/tech/styledComponents.png" title="styled Components"></Card>
+        <Card url="/tech/typescript.png" title="typeScript"></Card>
+        <Card url="/tech/material.png" title="material ui"></Card>
         <Card url="/tech/next.png" title="next"></Card>
         <Card url="/tech/nodejs.webp" title="nodejs"></Card>
         <Card url="/tech/figma.png" title="figma"></Card>
