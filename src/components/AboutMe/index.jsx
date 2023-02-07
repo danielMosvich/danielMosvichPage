@@ -18,7 +18,7 @@ const Container = styled.div`
   }
   @media (max-width: 400px) {
     height: max-content;
-    padding: 60px 10px 0;
+    padding: 80px 10px 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
