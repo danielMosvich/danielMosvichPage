@@ -1,7 +1,10 @@
+// import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import GlobalButton from "../GlobalButton";
 import Character from "./Character";
 const Container = styled.div`
+  /* background-color: red; */
+  overflow: hidden;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -13,24 +16,35 @@ const Container = styled.div`
     padding: 0 50px;
   }
   @media (max-width: 800px) {
+    position: relative;
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    /* z-index: 8; */
-    /* background-color: red; */
   }
   @media (max-width: 400px) {
     padding: 0 10px;
-    /* height: 70vh; */
   }
 `;
 const DataContainer = styled.div`
+/* background-color: red; */
+  overflow: hidden;
+  animation: titleSlide 2s ease 1.5s forwards;
+  opacity: 0;
+  @keyframes titleSlide {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
   width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
   transition: background 0.4s;
   z-index: 5;
   h2 {
@@ -40,8 +54,11 @@ const DataContainer = styled.div`
     font-weight: 800;
     /* color: ${(props) => props.theme.primaryColor}; */
     /* color: transparent; */
-    background: linear-gradient(0deg, rgba(255,207,139,1) 0%, rgba(255,102,102,1) 100%);
-;
+    background: linear-gradient(
+      0deg,
+      rgba(255, 207, 139, 1) 0%,
+      rgba(255, 102, 102, 1) 100%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -64,56 +81,55 @@ const DataContainer = styled.div`
     gap: 10px;
   }
   @media (max-width: 1500px) {
-    h2{
+    h2 {
       font-size: 6rem;
     }
-    h3{
+    h3 {
       font-size: 1.5rem;
     }
   }
   @media (max-width: 1200px) {
-    h2{
+    h2 {
       /* font-size: 5rem; */
     }
-    h3{
+    h3 {
       font-size: 1.2rem;
     }
-    p{
+    p {
       font-size: 1rem;
     }
   }
   @media (max-width: 800px) {
     width: 100%;
     align-items: center;
-    /* background-color: red; */
-    h2{
+    h2 {
       text-align: center;
       font-size: 4.9rem;
     }
-    h3{
+    h3 {
       font-size: 1rem;
     }
-    p{
+    p {
       font-size: 0.8rem;
     }
   }
   @media (max-width: 400px) {
-    h2{
+    h2 {
       font-size: 4.5rem;
     }
-    h3{
+    h3 {
       font-size: 0.9rem;
     }
-    p{
+    p {
       font-size: 0.7rem;
     }
     padding-top: 60px;
   }
 `;
 
-function Presentation({coords}) {
+function Presentation({ coords, id }) {
   return (
-    <Container>
+    <Container  id={id}>
       <DataContainer>
         <h2>Hola, soy Daniel Mosvich</h2>
         <h3>Front-web developer & digital artist</h3>
@@ -126,8 +142,7 @@ function Presentation({coords}) {
           </GlobalButton>
         </div>
       </DataContainer>
-      <Character coords={coords}/>
-      
+      <Character coords={coords} />
     </Container>
   );
 }

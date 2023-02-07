@@ -1,6 +1,16 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 const Container = styled.div`
+  animation:characterSlide 2s ease 1.5s forwards;
+  opacity: 0;
+  @keyframes characterSlide {
+    from{
+      transform: translateX(100%);
+    } to{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
   width: 40%;
   height: 100%;
   display: flex;
@@ -16,10 +26,19 @@ const Container = styled.div`
     padding-top: 0px;
   }
   @media (max-width: 800px) {
+    overflow: hidden;
     width: 60%;
     position: absolute;
     opacity: 0.1;
     filter: grayscale(1);
+    @keyframes characterSlide {
+    from{
+      transform: translateX(100%);
+    } to{
+      opacity: 0.1;
+      transform: translateX(0px);
+    }
+  }
   }
   @media (max-width: 400px) {
     /* background-color: red; */

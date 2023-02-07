@@ -50,7 +50,7 @@ const LinksContainer = styled.div`
   align-items: center;
   font-size: 1.7rem;
   font-weight: 600;
-  span{
+  & > span{
     height: 60px;
     display: flex;
     align-items: center;
@@ -120,19 +120,19 @@ export default function PhoneMenu({ themeToggle, theme }) {
       <OptionsMenu style={styleOption}>
         <LinksContainer>
           <span onClick={changeStyle}>
-            <LinkHeader url="#presentation" title="Home" />
+            <LinkHeader url="#home" title="Home" />
           </span>
           <span onClick={changeStyle}>
-            <LinkHeader url="#presentation" title="About me" />
+            <LinkHeader url="#aboutme" title="About me" />
           </span>
           <span onClick={changeStyle}>
-            <LinkHeader url="#presentation" title="Skills" />
+            <LinkHeader url="#skills" title="Skills" />
           </span>
-          <span onClick={changeStyle}>
+          {/* <span onClick={changeStyle}>
             <LinkHeader url="#presentation" title="Works" />
-          </span>
+          </span> */}
           <span onClick={changeStyle}>
-            <LinkHeader url="#presentation" title="Contact" />
+            <LinkHeader url="#contact" title="Contact" />
           </span>
           <span>
             <ToggleTheme themeToggle={themeToggle} theme={theme}/>

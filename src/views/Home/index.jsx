@@ -19,7 +19,7 @@ const WaveContainer = styled.div`
   position: relative;
   background-color: ${(props) => props.theme.primaryColor};
   margin-top: 200px;
-  z-index: 6;
+  z-index: 4;
   img{
     position: absolute;
     bottom: 0px;
@@ -27,14 +27,11 @@ const WaveContainer = styled.div`
 
   }
 `
-function Home({setLoad, themeToggle, theme}) {
+function Home({setLoad, themeToggle, theme,sectionPosition, setSectionPosition}) {
   // ! use the scrollY value for Paralax Effect in the future
   const [scrollY, setScrollY] = useState(0)
   const [coords,setCoords] = useState({x:0,y:0})
   const [styledState, setStyledState] = useState({transform: ""})
-  // const styled1 = {
-
-  // }
   useEffect(()=>{
     function handleScroll(){
       setScrollY(window.scrollY)
@@ -45,18 +42,35 @@ function Home({setLoad, themeToggle, theme}) {
     }
     window.addEventListener('scroll',handleScroll)
     window.addEventListener("mousemove",handleMouseMove)
+    setLoad(false)
   },[])
+  useEffect(()=>{
+    if(scrollY < 700){
+      setSectionPosition(1)
+    }
+    if(scrollY >= 600){
+      setSectionPosition(2)
+    } 
+    if(scrollY >= 1500){
+      setSectionPosition(3)
+    } 
+    if(scrollY >= 2300){
+      setSectionPosition(4)
+    }
+  },[scrollY])
   return (
     <ContainerHome>
       {/* <p style={{position:"fixed",color:"red", zIndex:10}}>{scrollY}</p> */}
-      <NavBar themeToggle={themeToggle} theme={theme}/>
-      <Presentation id="presentation" coords={coords}/>
-      <AboutMe id="aboutMe" coords={coords} />
-      <Skills />
+
+
+      <NavBar sectionPosition={sectionPosition} themeToggle={themeToggle} theme={theme}/>
+      <Presentation id="home" coords={coords}/>
+      <AboutMe id="aboutme" />
+      <Skills id="skills" />
       <WaveContainer style={styledState}>
         <img src="/wave.png" alt="" />
       </WaveContainer>
-      <Contact />
+      <Contact id="contact" />
     </ContainerHome>
   );
 }

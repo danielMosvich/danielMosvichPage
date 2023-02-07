@@ -1,26 +1,27 @@
+import { useContext, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Card from "./Card";
-
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-  margin-top: 100px;
-  /* background-color: red; */
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   h2 {
     text-align: center;
     font-size: 5rem;
     color: ${(props) => props.theme.primaryColor};
     text-shadow: 0px 0px 30px ${(props) => props.theme.primaryColorGlow2};
   }
-  position: sticky;
-  top: 70px;
   @media (max-width: 800px) {
+    height: max-content;
     h2 {
       font-size: 3rem;
     }
   }
   @media (max-width: 400px) {
+    padding-top: 80px;
     h2 {
       font-size: 3rem;
     }
@@ -54,11 +55,39 @@ const CardsContainer = styled.div`
   }
 `;
 
-function Skills() {
+function Skills({ id }) {
+  const myH2 = useRef();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      });
+    });
+    observer.observe(myH2.current);
+  }, []);
   return (
-    <Container>
-      <h2>Skills</h2>
-      <CardsContainer>
+    <Container id={id}>
+      <h2
+        ref={myH2}
+        style={{
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? "translateY(0)" : "translateY(100%)",
+          transition: "opacity 0.8s, transform 0.8s",
+        }}
+      >
+        Skills
+      </h2>
+      <CardsContainer
+        style={{
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? "translateY(0)" : "translateY(100%)",
+          transition: "opacity 0.9s, transform 0.9s",
+        }}
+      >
         <Card url="/tech/html.png" title="html"></Card>
         <Card url="/tech/css.png" title="css"></Card>
         <Card url="/tech/javascript.png" title="javascript"></Card>

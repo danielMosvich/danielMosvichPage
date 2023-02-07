@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense, useEffect, useState } from "react";
 const Home = lazy(() => import("./views/Home"));
 import Preload from "./views/Preload";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./styles/theme";
 
 const GlobalStyle = createGlobalStyle`
@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     --card-shadow-primary:4px 4px 20px rgba(0,0,0,0.20);
   }
 `;
+
 function App() {
   const storageTheme = localStorage.getItem("theme");
   const localTheme =
@@ -22,6 +23,14 @@ function App() {
   const [theme, setTheme] = useState(
     storageTheme ? storageTheme : localTheme ? "dark" : "light"
   );
+
+
+
+  const [sectionPosition, setSectionPosition] = useState("home")
+
+
+
+
   function themeToggle() {
     if (theme === "light") {
       setTheme("dark");
@@ -32,25 +41,31 @@ function App() {
     }
   }
   useEffect(() => {
-    setLoad(false);
     localStorage.setItem("theme", theme);
   }, []);
+
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-      <div className="App">
-        <GlobalStyle />
-        <Preload load={load} />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Suspense>
-                <Home themeToggle={themeToggle} theme={theme} />
-              </Suspense>
-            }
-          />
-        </Routes>
-      </div>
+        <div className="App">
+          <GlobalStyle />
+          <Preload load={load} />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Suspense>
+                  <Home
+                    themeToggle={themeToggle}
+                    theme={theme}
+                    setLoad={setLoad}
+                    sectionPosition={sectionPosition}
+                    setSectionPosition={setSectionPosition}
+                  />
+                </Suspense>
+              }
+            />
+          </Routes>
+        </div>
     </ThemeProvider>
   );
 }

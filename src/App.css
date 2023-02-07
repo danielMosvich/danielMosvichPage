@@ -4,6 +4,10 @@
   border: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   background: rgb(255, 102, 102);
 }

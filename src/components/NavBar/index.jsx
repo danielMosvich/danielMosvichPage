@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import gsap from "gsap";
-import { useRef } from "react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+
 import ToggleTheme from "./ToggleTheme";
 import LinkHeader from "./LinkHeader";
 import PhoneMenu from "./PhoneMenu";
@@ -62,7 +62,6 @@ const ContainerNav = styled.div`
   align-items: center;
   a {
     text-transform: uppercase;
-    color: ${(props) => props.theme.textColor1};
     font-size: 1.2rem;
     font-weight: 700;
     text-decoration: none;
@@ -83,7 +82,7 @@ const ContainerNav = styled.div`
   
 `;
 
-function NavBar({ themeToggle, theme }) {
+function NavBar({ themeToggle, theme, sectionPosition }) {
   const logo = useRef(null);
   useEffect(() => {
     gsap.to(logo.current, {
@@ -100,17 +99,11 @@ function NavBar({ themeToggle, theme }) {
       </ContainerLogo>
       <PhoneMenu themeToggle={themeToggle} theme={theme}/>
       <ContainerNav>
-        <LinkHeader url="uwu.com" title="Home" />
-        <LinkHeader url="#presentation" title="About me" />
-        <LinkHeader url="#presentation" title="Skills" />
-        <LinkHeader url="#presentation" title="Works" />
-        <LinkHeader url="#presentation" title="Contact" />
-
-        {/* <a href="#aboutMe">About me</a>
-        <a href="#">Skills</a>
-        <a href="#">Works</a>
-        <a href="#">Contact</a> */}
-        {/* bru */}
+        <LinkHeader active={sectionPosition === 1 ? true : false} url="#home" title="Home" />
+        <LinkHeader active={sectionPosition === 2 ? true : false} url="#aboutme" title="About me" />
+        <LinkHeader active={sectionPosition === 3 ? true : false}  url="#skills" title="Skills" />
+        {/* <LinkHeader url="#works" title="Works" /> */}
+        <LinkHeader active={sectionPosition === 4 ? true : false} url="#contact" title="Contact" />
         <ToggleTheme themeToggle={themeToggle} theme={theme} />
       </ContainerNav>
     </Container>

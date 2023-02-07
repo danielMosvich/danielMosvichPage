@@ -1,14 +1,13 @@
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-
 const Container = styled.div`
-  /* transform: translateY(-5px); */
   background-color: ${(props) => props.theme.primaryColor};
   width: 100%;
   padding: 0 300px;
   display: flex;
   position: relative;
   height: 100vh;
-  z-index: 6;
+  z-index: 4;
   @media (max-width: 1500px) {
     padding: 0 100px;
   }
@@ -21,13 +20,13 @@ const Container = styled.div`
   @media (max-width: 400px) {
     padding: 0 10px;
   }
-  
 `;
 const AllData = styled.div`
   width: 100%;
   display: flex;
   /* height: 100vh; */
   /* background-color: black; */
+  overflow: hidden;
 `;
 const ContainerDraw = styled.div`
   width: 50%;
@@ -53,7 +52,6 @@ const ContainerData = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* background-color: green; */
   @media (max-width: 800px) {
     width: 70%;
   }
@@ -176,11 +174,30 @@ const RedesContainer = styled.div`
     }
   }
 `;
-function Contact() {
+function Contact({id}) {
+  const myContainerData = useRef();
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      });
+    });
+    observer.observe(myContainerData.current);
+  }, []);
   return (
-    <Container>
+    <Container id={id}>
       <AllData>
-        <ContainerData>
+        <ContainerData
+          ref={myContainerData}
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? "translateY(0)" : "translateY(10%)",
+            transition: "opacity 0.8s, transform 0.8s",
+          }}
+        >
           <Head>
             <img src="/daniray.svg" alt="" />
             <h3>Daniel Mosvich</h3>
@@ -197,7 +214,10 @@ function Contact() {
                 <p>GitHub</p>
                 <img src="/icons/github.png" alt="" />
               </a>
-              <a href="https://www.linkedin.com/in/jose-daniel-reyes-mosvich-53247a238/" target={"_blank"}>
+              <a
+                href="https://www.linkedin.com/in/jose-daniel-reyes-mosvich-53247a238/"
+                target={"_blank"}
+              >
                 <p>LinkedIn</p>
                 <img src="/icons/linkedin.png" alt="" />
               </a>
@@ -205,7 +225,13 @@ function Contact() {
           </Body>
         </ContainerData>
 
-        <ContainerDraw>
+        <ContainerDraw
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? "translateY(0)" : "translateY(10%)",
+            transition: "opacity 0.9s, transform 0.9s",
+          }}
+        >
           <img src="/characters/character4.png" alt="" />
         </ContainerDraw>
       </AllData>
