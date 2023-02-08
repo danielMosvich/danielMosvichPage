@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import gsap from "gsap";
-import { useEffect, useRef } from "react";
 
 import ToggleTheme from "./ToggleTheme";
 import LinkHeader from "./LinkHeader";
@@ -83,19 +81,10 @@ const ContainerNav = styled.div`
 `;
 
 function NavBar({ themeToggle, theme, sectionPosition }) {
-  const logo = useRef(null);
-  useEffect(() => {
-    gsap.to(logo.current, {
-      rotate: 360,
-      duration: 10,
-      ease: "none",
-      repeat: -1,
-    });
-  }, []);
   return (
     <Container>
       <ContainerLogo>
-        <img ref={logo} src="/daniray.svg" alt="daniel mosvich icon" />
+        <img src="/daniray.svg" alt="daniel mosvich icon" />
       </ContainerLogo>
       <PhoneMenu themeToggle={themeToggle} theme={theme}/>
       <ContainerNav>

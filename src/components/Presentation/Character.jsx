@@ -26,7 +26,6 @@ const Container = styled.div`
     padding-top: 0px;
   }
   @media (max-width: 800px) {
-    overflow: hidden;
     width: 60%;
     position: absolute;
     opacity: 0.1;

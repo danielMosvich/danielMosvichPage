@@ -65,7 +65,7 @@ const Buble1 = styled.div`
   img {
     object-fit: contain;
 
-    animation-name: logoSpiner;
+    /* animation-name: logoSpiner;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -76,7 +76,7 @@ const Buble1 = styled.div`
       from {
         transform: rotate(-360deg);
       }
-    }
+    } */
   }
 `;
 

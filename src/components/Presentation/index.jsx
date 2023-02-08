@@ -26,8 +26,8 @@ const Container = styled.div`
   }
 `;
 const DataContainer = styled.div`
-/* background-color: red; */
-  overflow: hidden;
+  /* background-color: red; */
+  /* overflow: hidden; */
   animation: titleSlide 2s ease 1.5s forwards;
   opacity: 0;
   @keyframes titleSlide {
@@ -47,27 +47,73 @@ const DataContainer = styled.div`
 
   transition: background 0.4s;
   z-index: 5;
-  h2 {
-    font-size: 8rem;
-    line-height: 100%;
-    text-transform: capitalize;
-    font-weight: 800;
-    /* color: ${(props) => props.theme.primaryColor}; */
-    /* color: transparent; */
+  span {
+    /* background: linear-gradient(
+      0deg,
+      #ffcf8b 0%,
+      #ff6666 100%
+    ); */
     background: linear-gradient(
+      0deg,
+      rgba(255, 102, 102, 1) 50%,
+      rgba(255, 207, 139, 1) 100%
+    );
+    /* height: 400px; */
+    animation: bgEfect 4s ease infinite both;
+    /* animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease; */
+    @keyframes bgEfect {
+      0%{
+        background-size: 100% 100%;
+        
+      }
+      50% {
+        background-size: 100% 200%;
+      }
+      100% {
+        background-size: 100% 100%;
+      }
+    }
+    -webkit-background-clip: text;
+    background-clip: text;
+    h2 {
+      font-size: clamp(4rem, 10vw, 7rem);
+      line-height: 100%;
+      text-transform: capitalize;
+      font-weight: 800;
+      font-family: "Azeret Mono", monospace;
+      /* position: relative; */
+      display: flex;
+      /* color: ${(props) => props.theme.primaryColor}; */
+      /* background: linear-gradient(
       0deg,
       rgba(255, 207, 139, 1) 0%,
       rgba(255, 102, 102, 1) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0px 0px 30px ${(props) => props.theme.primaryColorGlow2};
+    ); */
+
+      /* -webkit-background-clip: text;
+      background-clip: text; */
+      color: transparent;
+      text-shadow: 0px 0px 30px ${(props) => props.theme.primaryColorGlow2};
+    }
   }
   h3 {
-    font-size: 1.8rem;
-    color: ${(props) => props.theme.textColor1};
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: ${(props) => props.theme.textColor2};
     transition: color 0.4s;
+    font-weight: 500;
+  }
+  h4 {
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(1rem, 2vw, 1.7rem);
+    line-height: 100%;
+    text-transform: capitalize;
+    /* font-weight: 800; */
+    font-weight: 600;
+    color: ${(props) => props.theme.textColor1};
   }
   p {
     font-size: 1.1rem;
@@ -80,43 +126,20 @@ const DataContainer = styled.div`
     display: flex;
     gap: 10px;
   }
-  @media (max-width: 1500px) {
-    h2 {
-      font-size: 6rem;
-    }
-    h3 {
-      font-size: 1.5rem;
-    }
-  }
-  @media (max-width: 1200px) {
-    h2 {
-      /* font-size: 5rem; */
-    }
-    h3 {
-      font-size: 1.2rem;
-    }
-    p {
-      font-size: 1rem;
-    }
-  }
   @media (max-width: 800px) {
     width: 100%;
     align-items: center;
     h2 {
       text-align: center;
-      font-size: 4.9rem;
     }
-    h3 {
-      font-size: 1rem;
-    }
-    p {
-      font-size: 0.8rem;
+    h4 {
+      text-align: center;
     }
   }
   @media (max-width: 400px) {
-    h2 {
+    /* h2 {
       font-size: 4.5rem;
-    }
+    } */
     h3 {
       font-size: 0.9rem;
     }
@@ -129,10 +152,13 @@ const DataContainer = styled.div`
 
 function Presentation({ coords, id }) {
   return (
-    <Container  id={id}>
+    <Container id={id}>
       <DataContainer>
-        <h2>Hola, soy Daniel Mosvich</h2>
-        <h3>Front-web developer & digital artist</h3>
+        <h3>Hola, mi nombre es</h3>
+        <span>
+          <h2>Daniel Mosvich</h2>
+        </span>
+        <h4>Front-web developer & digital artist</h4>
         <div>
           <GlobalButton padding={"15px"} color={"white"} size={"1.2rem"}>
             Proyectos
