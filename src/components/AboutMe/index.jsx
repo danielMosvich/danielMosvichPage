@@ -7,13 +7,12 @@ const Container = styled.div`
 
   display: flex;
   padding: 0 300px;
-  /* background-color: red; */
   @media (max-width: 1500px) {
     padding: 0 100px;
   }
   @media (max-width: 1200px) {
     height: 50vh;
-    padding: 0 50px;
+    padding: 60px 50px 0;
   }
   @media (max-width: 800px) {
     height: 60vh;
