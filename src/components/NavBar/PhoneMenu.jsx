@@ -5,7 +5,7 @@ import ToggleTheme from "./ToggleTheme";
 const Container = styled.div`
   width: 60%;
   display: none;
-  @media (max-width: 800px) {
+  @media (max-width: 1200px) {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -55,7 +55,6 @@ const LinksContainer = styled.div`
     display: flex;
     align-items: center;
   }
-  /* transition: color 0.4s; */
 `;
 export default function PhoneMenu({ themeToggle, theme }) {
   const [buttonState, setButtonState] = useState(false);
@@ -128,9 +127,6 @@ export default function PhoneMenu({ themeToggle, theme }) {
           <span onClick={changeStyle}>
             <LinkHeader url="#skills" title="Skills" />
           </span>
-          {/* <span onClick={changeStyle}>
-            <LinkHeader url="#presentation" title="Works" />
-          </span> */}
           <span onClick={changeStyle}>
             <LinkHeader url="#contact" title="Contact" />
           </span>

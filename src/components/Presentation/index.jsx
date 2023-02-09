@@ -1,5 +1,6 @@
 // import { useEffect, useRef } from "react";
 import styled from "styled-components";
+import BackgroundBubles from "../BackgroundBubles";
 import GlobalButton from "../GlobalButton";
 import Character from "./Character";
 const Container = styled.div`
@@ -26,8 +27,6 @@ const Container = styled.div`
   }
 `;
 const DataContainer = styled.div`
-  /* background-color: red; */
-  /* overflow: hidden; */
   animation: titleSlide 2s ease 1.5s forwards;
   opacity: 0;
   @keyframes titleSlide {
@@ -48,22 +47,12 @@ const DataContainer = styled.div`
   transition: background 0.4s;
   z-index: 5;
   span {
-    /* background: linear-gradient(
-      0deg,
-      #ffcf8b 0%,
-      #ff6666 100%
-    ); */
     background: linear-gradient(
       0deg,
       rgba(255, 102, 102, 1) 50%,
-      rgba(255, 207, 139, 1) 100%
+      #ffcf8b 100%
     );
-    /* height: 400px; */
     animation: bgEfect 4s ease infinite both;
-    /* animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: backwards;
-    animation-timing-function: ease; */
     @keyframes bgEfect {
       0%{
         background-size: 100% 100%;
@@ -84,19 +73,9 @@ const DataContainer = styled.div`
       text-transform: capitalize;
       font-weight: 800;
       font-family: "Azeret Mono", monospace;
-      /* position: relative; */
       display: flex;
-      /* color: ${(props) => props.theme.primaryColor}; */
-      /* background: linear-gradient(
-      0deg,
-      rgba(255, 207, 139, 1) 0%,
-      rgba(255, 102, 102, 1) 100%
-    ); */
-
-      /* -webkit-background-clip: text;
-      background-clip: text; */
       color: transparent;
-      text-shadow: 0px 0px 30px ${(props) => props.theme.primaryColorGlow2};
+      text-shadow: 0px 0px 10px ${(props) => props.theme.primaryColorGlow2};
     }
   }
   h3 {
@@ -114,6 +93,7 @@ const DataContainer = styled.div`
     /* font-weight: 800; */
     font-weight: 600;
     color: ${(props) => props.theme.textColor1};
+    transition: 0.4s;
   }
   p {
     font-size: 1.1rem;
@@ -121,8 +101,9 @@ const DataContainer = styled.div`
     color: ${(props) => props.theme.textColor2};
     transition: color 0.4s;
   }
-  div {
-    margin-top: 10px;
+  > div {
+    /* margin-top: 10px; */
+    padding-top: 20px;
     display: flex;
     gap: 10px;
   }
@@ -153,6 +134,7 @@ const DataContainer = styled.div`
 function Presentation({ coords, id }) {
   return (
     <Container id={id}>
+      <BackgroundBubles></BackgroundBubles>
       <DataContainer>
         <h3>Hola, mi nombre es</h3>
         <span>
@@ -163,7 +145,7 @@ function Presentation({ coords, id }) {
           <GlobalButton padding={"15px"} color={"white"} size={"1.2rem"}>
             Proyectos
           </GlobalButton>
-          <GlobalButton padding={"15px"} outlined size={"1.2rem"}>
+          <GlobalButton padding={"15px"} outlined size={"1.2rem"} url="https://drive.google.com/file/d/1Vh0R4kTc4W3UdOIwyvzOJUSpXdzNw27T/view?usp=sharing">
             Descargar CV
           </GlobalButton>
         </div>
