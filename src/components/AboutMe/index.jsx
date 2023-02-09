@@ -11,10 +11,10 @@ const Container = styled.div`
     padding: 0 100px;
   }
   @media (max-width: 1200px) {
+    height: 70vh;
     padding: 0 50px;
   }
   @media (max-width: 800px) {
-    height: 70vh;
     padding: 0 20px;
     flex-direction: column;
     align-items: center;
