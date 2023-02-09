@@ -15,7 +15,7 @@ const Container = styled.div`
   }
   @media (max-width: 800px) {
     padding: 0 20px;
-    /* height: 80vh; */
+    height: 70vh;
     justify-content: center;
     flex-direction: column-reverse;
   }
