@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 // import Card from "./Card";
 const Container = styled.div`
+/* background-color: red; */
   width: 100%;
   height: 100vh;
   padding: 0 300px;
@@ -12,15 +13,17 @@ const Container = styled.div`
   }
   @media (max-width: 1200px) {
     padding: 0 50px;
-    height: 70vh;
+    height: 50vh;
   }
   @media (max-width: 800px) {
+    height: 60vh;
     padding: 0 20px;
     justify-content: center;
     flex-direction: column-reverse;
   }
   @media (max-width: 400px) {
     padding: 0 10px;
+    height: 80vh;
   }
 `;
 const ContainerInformation = styled.div`

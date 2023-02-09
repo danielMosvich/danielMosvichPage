@@ -18,9 +18,10 @@ const WaveContainer = styled.div`
   height: 1px;
   position: relative;
   background-color: ${(props) => props.theme.primaryColor};
-  margin-top: 400px;
+  margin-top: 200px;
+  /* margin-top: 100px; */
   @media (max-width: 800px) {
-    margin-top: 100px;
+    /* margin-top: 300px; */
   }
   z-index: 4;
   img{

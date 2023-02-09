@@ -7,14 +7,16 @@ const Container = styled.div`
 
   display: flex;
   padding: 0 300px;
+  /* background-color: red; */
   @media (max-width: 1500px) {
     padding: 0 100px;
   }
   @media (max-width: 1200px) {
-    height: 70vh;
+    height: 50vh;
     padding: 0 50px;
   }
   @media (max-width: 800px) {
+    height: 60vh;
     padding: 0 20px;
     flex-direction: column;
     align-items: center;
@@ -22,6 +24,7 @@ const Container = styled.div`
     gap: 30px;
   }
   @media (max-width: 400px) {
+    height: 100vh;
     padding: 0 10px;
   }
 `;
